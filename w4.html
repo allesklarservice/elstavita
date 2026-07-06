@@ -18,6 +18,8 @@
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    section[id],div[id="projekty"]{scroll-margin-top:86px}
     body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:clip}
     img{max-width:100%;display:block}
     a{color:inherit;text-decoration:none}
@@ -237,13 +239,12 @@
       #site-header nav{display:none}
       #burger{display:block}
       .hero,#onas .grid,.split,#rezerwacja .r-grid,#kontakt .k-grid{grid-template-columns:1fr}
-      .sticker.s1{right:2px}
-      .sticker.s2{left:2px}
-      .atuty{grid-template-columns:repeat(2,1fr)}
-      .atuty>div{border-bottom:var(--bw) solid var(--ink)}
-      .atuty>div:nth-child(even){border-right:0}
-      .atuty>div:last-child{grid-column:1/-1;border-bottom:0}
-      .atuty>div:nth-child(3),.atuty>div:nth-child(4){border-bottom:var(--bw) solid var(--ink)}
+      .hero-media{margin-top:18px}
+      .sticker.s1{right:4px;top:-14px}
+      .sticker.s2{left:4px}
+      .atuty{grid-template-columns:repeat(2,1fr);border:0;box-shadow:none;background:none;gap:12px}
+      .atuty>div{border:var(--bw) solid var(--ink);box-shadow:var(--sh-sm);background:#fff}
+      .atuty>div:last-child{grid-column:1/-1}
       .p-notes{grid-template-columns:1fr}
       #bar .split .copy{order:2}
     }

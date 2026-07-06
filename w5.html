@@ -19,6 +19,8 @@
     }
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    section[id],div[id="projekty"]{scroll-margin-top:92px}
     body{font-family:var(--sans);background:var(--navy);color:#fff;font-size:16px;line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:clip}
     img{max-width:100%;display:block}
     a{color:inherit;text-decoration:none}
@@ -250,6 +252,11 @@
       .g-top{justify-content:center;text-align:center}
     }
     @media(max-width:640px){
+      section[id],div[id="projekty"]{scroll-margin-top:84px}
+      .glass,.tag,#site-header .bar{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+      #site-header .bar{padding:8px 10px 8px 18px}
+      .logo{font-size:17px}
+      .hero .panel{padding:20px 18px}
       .hero .stats{gap:8px}
       .hero .stats>div{padding:11px 16px;flex:1 1 40%}
       .am-grid{grid-template-columns:1fr 1fr;gap:10px}
