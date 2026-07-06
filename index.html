@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl" class="no-js">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,101 +11,94 @@
   <link rel="icon" type="image/png" href="images/misc/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Preloader -->
-  <div id="loader">
-    <div class="l-name">Elsta Vita<br>Władysławowo</div>
-    <div class="l-count">0</div>
-  </div>
-
-  <!-- Custom cursor -->
-  <div id="cursor"></div>
-
-  <!-- Topbar -->
-  <div id="topbar">
-    <a href="#start" class="brand">Elsta Vita<small>dom wypoczynkowy · Władysławowo</small></a>
-    <div class="right">
-      <a href="#rezerwacja" class="res-link">Rezerwacja</a>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="wrap bar">
+      <a href="#start" class="logo">Elsta <em>Vita</em></a>
+      <nav>
+        <a href="#onas">O nas</a>
+        <a href="#atrakcje">Atrakcje</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#bungalow">Bungalow</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#rezerwacja" class="cta">Rezerwacja</a>
+      </nav>
       <button id="burger" aria-label="Menu"><i></i><i></i></button>
     </div>
-  </div>
+  </header>
 
-  <!-- Fullscreen menu -->
-  <nav id="menu">
-    <div class="m-links">
-      <a href="#start"><sup>01</sup>Start</a>
-      <a href="#atrakcje"><sup>02</sup>Atrakcje</a>
-      <a href="#galeria"><sup>03</sup>Galeria</a>
-      <a href="#cennik"><sup>04</sup>Cennik</a>
-      <a href="#bungalow"><sup>05</sup>Bungalow</a>
-      <a href="#opinie"><sup>06</sup>Opinie</a>
-      <a href="#rezerwacja"><sup>07</sup>Rezerwacja</a>
-      <a href="#kontakt"><sup>08</sup>Kontakt</a>
-    </div>
-    <div class="m-foot">
-      <span>ul. Cetniewska 21, 84-120 Władysławowo</span>
+  <!-- Menu mobilne -->
+  <div id="mobile-menu">
+    <a href="#onas">O nas <span>01</span></a>
+    <a href="#atrakcje">Atrakcje <span>02</span></a>
+    <a href="#galeria">Galeria <span>03</span></a>
+    <a href="#cennik">Cennik <span>04</span></a>
+    <a href="#bungalow">Bungalow <span>05</span></a>
+    <a href="#opinie">Opinie <span>06</span></a>
+    <a href="#rezerwacja">Rezerwacja <span>07</span></a>
+    <a href="#kontakt">Kontakt <span>08</span></a>
+    <div class="mm-contact">
       <a href="tel:+48883605225">+48 883 605 225</a>
       <a href="mailto:elstavita@elstavita.pl">elstavita@elstavita.pl</a>
-      <a href="https://www.facebook.com/dwelstavita" target="_blank" rel="noopener">Facebook ↗</a>
+      <span>ul. Cetniewska 21, 84-120 Władysławowo</span>
     </div>
-  </nav>
+  </div>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="start">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <div class="kick">Władysławowo · nad samym morzem</div>
-      <h1>
-        <span class="line"><span>Wczasy,</span></span>
-        <span class="line"><span>które <em>pachną</em></span></span>
-        <span class="line"><span>morzem</span></span>
-      </h1>
-      <div class="hero-foot">
-        <p>Dom Wypoczynkowy Elsta Vita — noclegi z pełnym wyżywieniem dla turystów indywidualnych i grup. Dziesięć minut spacerem od piaszczystej plaży.</p>
-        <div class="scroll-cue">
-          Przewiń
-          <svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v15M1 10l6 6 6-6"/></svg>
-        </div>
+  <!-- ============ START ============ -->
+  <section id="start">
+    <div class="wrap hero-text">
+      <p class="eyebrow rv">Dom wypoczynkowy · Władysławowo</p>
+      <h1 class="t-display rv">Proste, dobre wakacje <em>nad samym morzem</em></h1>
+      <p class="hero-lede rv">Noclegi z pełnym wyżywieniem dla rodzin, turystów indywidualnych i grup. Dziesięć minut spacerem od piaszczystej plaży, z domową kuchnią na miejscu.</p>
+      <div class="hero-links rv">
+        <a href="#rezerwacja" class="btn-pill">Zarezerwuj pobyt
+          <svg width="16" height="12" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 7h15M11 1l6 6-6 6"/></svg>
+        </a>
+        <a href="#cennik" class="link-under">Zobacz cennik</a>
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="ph"><img src="images/misc/background.jpg" alt="Plaża we Władysławowie" fetchpriority="high"></div>
+      <div class="wrap caption" style="padding-inline: 0;">
+        <span>Władysławowo Cetniewo, ul. Cetniewska 21</span>
+        <i>54.8008° N, 18.3896° E</i>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="facts rv">
+        <div><b>10 min</b><span>spacerem na plażę</span></div>
+        <div><b>2 posiłki</b><span>dziennie, w formie bufetu</span></div>
+        <div><b>od 65 zł</b><span>nocleg z wyżywieniem</span></div>
+        <div><b>2–4 os.</b><span>pokoje z łazienkami i TV</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Marquee -->
-  <div class="marquee" aria-hidden="true">
-    <div class="track">
-      <span>Władysławowo</span><span>Blisko plaży</span><span>Pełne wyżywienie</span><span>Wczasy rodzinne</span><span>Domowa kuchnia</span><span>Bungalow</span><span>Sezon 2026</span>
-      <span>Władysławowo</span><span>Blisko plaży</span><span>Pełne wyżywienie</span><span>Wczasy rodzinne</span><span>Domowa kuchnia</span><span>Bungalow</span><span>Sezon 2026</span>
-    </div>
-  </div>
-
-  <!-- ============ INTRO ============ -->
-  <section id="intro">
+  <!-- ============ O NAS ============ -->
+  <section id="onas">
     <div class="wrap">
-      <div class="sec-label rv"><span>O nas</span><span class="no">( 01 )</span></div>
+      <div class="sec-head rv"><span class="eyebrow">O nas</span><span class="no">( 01 )</span></div>
       <div class="grid">
         <div>
-          <h2 class="h-giant rv">Idealne miejsce <em>na rodzinny</em> wypoczynek</h2>
+          <h2 class="t-section rv">Miejsce na <em>rodzinny</em> wypoczynek</h2>
           <div class="copy rv">
-            <p>Dom Wypoczynkowy Elsta Vita zaprasza do spędzenia wypoczynku we Władysławowie. Oferujemy noclegi z pełnym wyżywieniem — tanie noclegi nad morzem, blisko plaży i z pysznym jedzeniem.</p>
-            <p>Jesteśmy dobrze zlokalizowani: dojedziesz do nas własnym transportem lub koleją — dworzec PKP Władysławowo mamy niedaleko. Władysławowo Cetniewo czeka na Was.</p>
+            <p>Dom Wypoczynkowy Elsta Vita zaprasza do spędzenia wypoczynku we Władysławowie. Oferujemy <b>noclegi z pełnym wyżywieniem</b> — tanie noclegi nad morzem, blisko plaży i z pysznym jedzeniem.</p>
+            <p>Jesteśmy dobrze zlokalizowani: dojedziesz do nas własnym transportem lub koleją — dworzec PKP Władysławowo mamy niedaleko. Teren ośrodka jest ogrodzony, z wygodnym parkingiem.</p>
             <p class="sig">— zespół Elsta Vita</p>
           </div>
         </div>
-        <div class="imgs">
-          <div class="im im-1"><img src="images/gallery/DSC_5331_DxO-1280x720.jpg" alt="Dom Wypoczynkowy Elsta Vita — budynek i teren"></div>
-          <div class="im im-2"><img src="images/gallery/109-5-1224x720.jpg" alt="Pokój w Elsta Vita"></div>
-          <div class="rot">Cetniewo · od 2014</div>
+        <div class="rv">
+          <div class="ph"><img src="images/gallery/DSC_5331_DxO-1280x720.jpg" alt="Dom Wypoczynkowy Elsta Vita — budynek i teren" loading="lazy"></div>
+          <div class="ph-cap"><span>Ośrodek Elsta Vita</span><span>Cetniewo</span></div>
         </div>
-      </div>
-
-      <div class="stats">
-        <div class="rv"><b data-to="10" data-suffix="'">10'</b><span>spacerem na plażę</span></div>
-        <div class="rv"><b data-to="2">2</b><span>posiłki dziennie — bufet</span></div>
-        <div class="rv"><b data-to="65" data-suffix=" zł">65 zł</b><span>nocleg z wyżywieniem już od</span></div>
       </div>
     </div>
   </section>
@@ -113,119 +106,119 @@
   <!-- ============ ATRAKCJE ============ -->
   <section id="atrakcje">
     <div class="wrap">
-      <div class="sec-label rv"><span>Atrakcje</span><span class="no">( 02 )</span></div>
-      <div class="head-row">
-        <h2 class="h-giant rv">Wszystko <em>na miejscu</em></h2>
-        <p class="rv">Osiem powodów, dla których nie będziesz chciał wyjeżdżać. A jeśli już — najlepsze atrakcje Władysławowa masz pod nosem.</p>
-      </div>
+      <div class="sec-head rv"><span class="eyebrow">Atrakcje</span><span class="no">( 02 )</span></div>
+      <h2 class="t-section rv" style="margin-bottom: clamp(28px, 5vh, 44px);">Wszystko <em>na miejscu</em></h2>
 
       <div class="am-list rv">
-        <div class="am-row"><span class="fill"></span><span class="idx">01</span><span class="nm">Wyśmienita kuchnia</span><span class="tag">2 posiłki / bufet</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">02</span><span class="nm">Parking</span><span class="tag">teren ogrodzony</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">03</span><span class="nm">Mini plac zabaw</span><span class="tag">dla najmłodszych</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">04</span><span class="nm">Pokój zabaw</span><span class="tag">na deszczowe dni</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">05</span><span class="nm">Grill</span><span class="tag">biesiada co tydzień</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">06</span><span class="nm">Dostęp WiFi</span><span class="tag">w całym obiekcie</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">07</span><span class="nm">Wypożyczalnia rowerów</span><span class="tag">szlaki nadmorskie</span></div>
-        <div class="am-row"><span class="fill"></span><span class="idx">08</span><span class="nm">Boisko do siatkówki</span><span class="tag">aktywnie</span></div>
+        <div class="am-row"><span class="idx">01</span><span class="nm">Wyśmienita kuchnia</span><span class="tag">2 posiłki dziennie, bufet</span></div>
+        <div class="am-row"><span class="idx">02</span><span class="nm">Parking</span><span class="tag">teren ogrodzony</span></div>
+        <div class="am-row"><span class="idx">03</span><span class="nm">Mini plac zabaw</span><span class="tag">dla najmłodszych</span></div>
+        <div class="am-row"><span class="idx">04</span><span class="nm">Pokój zabaw</span><span class="tag">na deszczowe dni</span></div>
+        <div class="am-row"><span class="idx">05</span><span class="nm">Grill</span><span class="tag">biesiada raz w tygodniu</span></div>
+        <div class="am-row"><span class="idx">06</span><span class="nm">Dostęp WiFi</span><span class="tag">w całym obiekcie</span></div>
+        <div class="am-row"><span class="idx">07</span><span class="nm">Wypożyczalnia rowerów</span><span class="tag">szlaki nadmorskie</span></div>
+        <div class="am-row"><span class="idx">08</span><span class="nm">Boisko do siatkówki</span><span class="tag">aktywny wypoczynek</span></div>
       </div>
 
+      <p class="atuty-head rv">Jak blisko stąd wszędzie</p>
       <div class="atuty rv">
-        <div><b>5<i>min</i></b><span>Aleja Gwiazd, Kościół</span></div>
-        <div><b>10<i>min</i></b><span>Plaża, Basen / COS Cetniewo</span></div>
-        <div><b>15<i>min</i></b><span>Ocean Park, Lemon Park, Park linowy</span></div>
-        <div><b>20<i>min</i></b><span>Taras widokowy, Lunapark, Muzeum motyli</span></div>
-        <div><b>30<i>min</i></b><span>KartCenter</span></div>
+        <div><b>5 <i>min</i></b><span>Aleja Gwiazd, Kościół</span></div>
+        <div><b>10 <i>min</i></b><span>Plaża, Basen / COS Cetniewo</span></div>
+        <div><b>15 <i>min</i></b><span>Ocean Park, Lemon Park, Park linowy</span></div>
+        <div><b>20 <i>min</i></b><span>Taras widokowy, Lunapark, Muzeum motyli</span></div>
+        <div><b>30 <i>min</i></b><span>KartCenter</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ GALERIA (pozioma) ============ -->
+  <!-- ============ GALERIA ============ -->
   <section id="galeria">
-    <div class="g-head">
-      <div class="wrap">
-        <div class="sec-label" style="border-color: var(--line-light);"><span>Galeria</span><span class="no">( 03 )</span></div>
-        <h2 class="h-giant">Zajrzyj <em>do środka</em></h2>
-        <p>Przewijaj — pokoje, jadalnia, bawialnia i teren ośrodka.</p>
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Galeria</span><span class="no">( 03 )</span></div>
+      <div class="g-top rv">
+        <h2 class="t-section">Zajrzyj <em>do środka</em></h2>
+        <div class="g-arrows">
+          <button class="g-prev" aria-label="Poprzednie zdjęcia">←</button>
+          <button class="g-next" aria-label="Następne zdjęcia">→</button>
+        </div>
       </div>
     </div>
 
-    <div class="g-track-wrap">
-      <div class="g-track">
-        <div class="g-card" data-title="Dom Wczasowy Elsta Vita" data-desc="Teren pensjonatu jest ogrodzony z możliwością dogodnego zaparkowania samochodu.">
-          <figure><img src="images/gallery/DSC_5331_DxO-1280x720.jpg" alt="Dom Wczasowy Elsta Vita" loading="lazy"></figure>
-          <figcaption><span>Ośrodek</span><i>01 / 18</i></figcaption>
-        </div>
-        <div class="g-card tall" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe z możliwością dostawek. Każdy z łazienką i kabiną prysznicową. TV bezpłatnie.">
-          <figure><img src="images/gallery/109-5-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>02 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe z możliwością dostawek.">
-          <figure><img src="images/gallery/Wladek1-47-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>03 / 18</i></figcaption>
-        </div>
-        <div class="g-card tall" data-title="Pokój na poddaszu" data-desc="Klimatyczne pokoje na poddaszu z pełnym wyposażeniem.">
-          <figure><img src="images/gallery/210-4-1224x720.jpg" alt="Pokój na poddaszu" loading="lazy"></figure>
-          <figcaption><span>Poddasze</span><i>04 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Pokój na poddaszu" data-desc="Każdy pokój wyposażony w łazienkę z kabiną prysznicową.">
-          <figure><img src="images/gallery/302-3-1280x720.jpg" alt="Pokój na poddaszu" loading="lazy"></figure>
-          <figcaption><span>Poddasze</span><i>05 / 18</i></figcaption>
-        </div>
-        <div class="g-card tall" data-title="Pokoje" data-desc="Pokoje 2 i 3-osobowe z możliwością dostawek.">
-          <figure><img src="images/gallery/101-1-1269x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>06 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Pokoje" data-desc="TV dla gości bezpłatnie.">
-          <figure><img src="images/gallery/113-2-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>07 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Pokoje" data-desc="Pokoje z możliwością dostawek.">
-          <figure><img src="images/gallery/213-3-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>08 / 18</i></figcaption>
-        </div>
-        <div class="g-card tall" data-title="Pokoje" data-desc="">
-          <figure><img src="images/gallery/106-6-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>09 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Pokoje" data-desc="Każdy pokój z łazienką.">
-          <figure><img src="images/gallery/106-7-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>10 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe.">
-          <figure><img src="images/gallery/104-3-1224x720.jpg" alt="Pokój" loading="lazy"></figure>
-          <figcaption><span>Pokoje</span><i>11 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Jadalnia" data-desc="Dwa posiłki dziennie w formie bufetu.">
-          <figure><img src="images/gallery/Jad-5-1224x720.jpg" alt="Jadalnia" loading="lazy"></figure>
-          <figcaption><span>Jadalnia</span><i>12 / 18</i></figcaption>
-        </div>
-        <div class="g-card tall" data-title="Łazienki" data-desc="Każdy pokój wyposażony jest w łazienkę z kabiną prysznicową.">
-          <figure><img src="images/gallery/107-4-816x720.jpg" alt="Łazienka" loading="lazy"></figure>
-          <figcaption><span>Łazienki</span><i>13 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Dom wypoczynkowy Elsta Vita" data-desc="Najlepsze miejsce na nocleg we Władysławowie.">
-          <figure><img src="images/gallery/DSC_5262_DxO-1280x720.jpg" alt="Elsta Vita" loading="lazy"></figure>
-          <figcaption><span>Ośrodek</span><i>14 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Plac zabaw" data-desc="Mini plac zabaw dla dzieci na terenie ośrodka.">
-          <figure><img src="images/gallery/DSC_5334_DxO-1280x720.jpg" alt="Plac zabaw" loading="lazy"></figure>
-          <figcaption><span>Dla dzieci</span><i>15 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Bawialnia" data-desc="Pomieszczenie pełne zabawek. W deszczowe dni organizujemy konkursy dla najmłodszych.">
-          <figure><img src="images/gallery/DSC_5338_DxO-1280x720.jpg" alt="Bawialnia" loading="lazy"></figure>
-          <figcaption><span>Dla dzieci</span><i>16 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Sala gier" data-desc="Stół do ping ponga, piłkarzyki, dart.">
-          <figure><img src="images/gallery/DSC_5343_DxO-1280x720.jpg" alt="Sala gier" loading="lazy"></figure>
-          <figcaption><span>Rozrywka</span><i>17 / 18</i></figcaption>
-        </div>
-        <div class="g-card" data-title="Jadalnia" data-desc="">
-          <figure><img src="images/gallery/Jad-3-1280x720.jpg" alt="Jadalnia" loading="lazy"></figure>
-          <figcaption><span>Jadalnia</span><i>18 / 18</i></figcaption>
-        </div>
-      </div>
+    <div class="g-strip rv">
+      <button class="g-item" data-title="Dom Wczasowy Elsta Vita" data-desc="Teren pensjonatu jest ogrodzony z możliwością dogodnego zaparkowania samochodu.">
+        <span class="ph"><img src="images/gallery/DSC_5331_DxO-1280x720.jpg" alt="Dom Wczasowy Elsta Vita" loading="lazy"></span>
+        <span class="g-cap"><span>Ośrodek</span><i>01</i></span>
+      </button>
+      <button class="g-item portrait" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe z możliwością dostawek. Każdy z łazienką i kabiną prysznicową. TV bezpłatnie.">
+        <span class="ph"><img src="images/gallery/109-5-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>02</i></span>
+      </button>
+      <button class="g-item" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe z możliwością dostawek.">
+        <span class="ph"><img src="images/gallery/Wladek1-47-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>03</i></span>
+      </button>
+      <button class="g-item portrait" data-title="Pokój na poddaszu" data-desc="Klimatyczne pokoje na poddaszu z pełnym wyposażeniem.">
+        <span class="ph"><img src="images/gallery/210-4-1224x720.jpg" alt="Pokój na poddaszu" loading="lazy"></span>
+        <span class="g-cap"><span>Poddasze</span><i>04</i></span>
+      </button>
+      <button class="g-item" data-title="Pokój na poddaszu" data-desc="Każdy pokój wyposażony w łazienkę z kabiną prysznicową.">
+        <span class="ph"><img src="images/gallery/302-3-1280x720.jpg" alt="Pokój na poddaszu" loading="lazy"></span>
+        <span class="g-cap"><span>Poddasze</span><i>05</i></span>
+      </button>
+      <button class="g-item portrait" data-title="Pokoje" data-desc="Pokoje 2 i 3-osobowe z możliwością dostawek.">
+        <span class="ph"><img src="images/gallery/101-1-1269x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>06</i></span>
+      </button>
+      <button class="g-item" data-title="Pokoje" data-desc="TV dla gości bezpłatnie.">
+        <span class="ph"><img src="images/gallery/113-2-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>07</i></span>
+      </button>
+      <button class="g-item" data-title="Pokoje" data-desc="Pokoje z możliwością dostawek.">
+        <span class="ph"><img src="images/gallery/213-3-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>08</i></span>
+      </button>
+      <button class="g-item portrait" data-title="Pokoje" data-desc="">
+        <span class="ph"><img src="images/gallery/106-6-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>09</i></span>
+      </button>
+      <button class="g-item" data-title="Pokoje" data-desc="Każdy pokój z łazienką.">
+        <span class="ph"><img src="images/gallery/106-7-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>10</i></span>
+      </button>
+      <button class="g-item" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe.">
+        <span class="ph"><img src="images/gallery/104-3-1224x720.jpg" alt="Pokój" loading="lazy"></span>
+        <span class="g-cap"><span>Pokoje</span><i>11</i></span>
+      </button>
+      <button class="g-item" data-title="Jadalnia" data-desc="Dwa posiłki dziennie w formie bufetu.">
+        <span class="ph"><img src="images/gallery/Jad-5-1224x720.jpg" alt="Jadalnia" loading="lazy"></span>
+        <span class="g-cap"><span>Jadalnia</span><i>12</i></span>
+      </button>
+      <button class="g-item portrait" data-title="Łazienki" data-desc="Każdy pokój wyposażony jest w łazienkę z kabiną prysznicową.">
+        <span class="ph"><img src="images/gallery/107-4-816x720.jpg" alt="Łazienka" loading="lazy"></span>
+        <span class="g-cap"><span>Łazienki</span><i>13</i></span>
+      </button>
+      <button class="g-item" data-title="Dom wypoczynkowy Elsta Vita" data-desc="Najlepsze miejsce na nocleg we Władysławowie.">
+        <span class="ph"><img src="images/gallery/DSC_5262_DxO-1280x720.jpg" alt="Elsta Vita" loading="lazy"></span>
+        <span class="g-cap"><span>Ośrodek</span><i>14</i></span>
+      </button>
+      <button class="g-item" data-title="Plac zabaw" data-desc="Mini plac zabaw dla dzieci na terenie ośrodka.">
+        <span class="ph"><img src="images/gallery/DSC_5334_DxO-1280x720.jpg" alt="Plac zabaw" loading="lazy"></span>
+        <span class="g-cap"><span>Dla dzieci</span><i>15</i></span>
+      </button>
+      <button class="g-item" data-title="Bawialnia" data-desc="Pomieszczenie pełne zabawek. W deszczowe dni organizujemy konkursy dla najmłodszych.">
+        <span class="ph"><img src="images/gallery/DSC_5338_DxO-1280x720.jpg" alt="Bawialnia" loading="lazy"></span>
+        <span class="g-cap"><span>Dla dzieci</span><i>16</i></span>
+      </button>
+      <button class="g-item" data-title="Sala gier" data-desc="Stół do ping ponga, piłkarzyki, dart.">
+        <span class="ph"><img src="images/gallery/DSC_5343_DxO-1280x720.jpg" alt="Sala gier" loading="lazy"></span>
+        <span class="g-cap"><span>Rozrywka</span><i>17</i></span>
+      </button>
+      <button class="g-item" data-title="Jadalnia" data-desc="">
+        <span class="ph"><img src="images/gallery/Jad-3-1280x720.jpg" alt="Jadalnia" loading="lazy"></span>
+        <span class="g-cap"><span>Jadalnia</span><i>18</i></span>
+      </button>
     </div>
+    <p class="g-count">1 / 18</p>
   </section>
 
   <!-- Lightbox -->
@@ -240,51 +233,55 @@
   <!-- ============ CENNIK ============ -->
   <section id="cennik">
     <div class="wrap">
-      <div class="sec-label rv"><span>Cennik</span><span class="no">( 04 )</span></div>
-      <div class="c-head">
-        <h2 class="h-giant rv">Uczciwe ceny, <em>zero gwiazdek</em></h2>
-        <p class="rv">Ceny za osobę za dobę. Nocleg w pokoju z łazienką i TV + dwa posiłki dziennie w formie bufetu. 8% VAT w cenie.</p>
-      </div>
+      <div class="sec-head rv"><span class="eyebrow">Cennik</span><span class="no">( 04 )</span></div>
+      <h2 class="t-section rv" style="margin-bottom: 18px;">Ceny za osobę <em>za dobę</em></h2>
+      <p class="c-intro rv">Nocleg w pokoju z łazienką i TV, dwa posiłki dziennie w formie bufetu, 8% VAT w cenie.</p>
 
-      <div class="p-table rv">
-        <div class="p-row p-head">
-          <div>Okres</div>
-          <div class="p-val" style="font-family:inherit;font-style:normal;font-size:inherit;">Dorosły</div>
-          <div class="p-val" style="font-family:inherit;font-style:normal;font-size:inherit;">Dziecko</div>
-          <div class="p-val" style="font-family:inherit;font-style:normal;font-size:inherit;">Dorosły — dostawka</div>
-          <div class="p-val" style="font-family:inherit;font-style:normal;font-size:inherit;">Dziecko — dostawka</div>
+      <div class="rv">
+        <div class="p-legend">
+          <div>Okres</div><div>Dorosły</div><div>Dziecko</div><div>Dorosły · dostawka</div><div>Dziecko · dostawka</div>
         </div>
         <div class="p-row">
-          <span class="fill"></span>
-          <div class="p-per">do 06.06<small>wiosna</small></div>
-          <div class="p-val">130 <span>zł</span></div><div class="p-val">110 <span>zł</span></div><div class="p-val">85 <span>zł</span></div><div class="p-val">65 <span>zł</span></div>
+          <div class="per">do 06.06<small>wiosna</small></div>
+          <div class="val" data-l="Dorosły">130 <span>zł</span></div>
+          <div class="val" data-l="Dziecko">110 <span>zł</span></div>
+          <div class="val" data-l="Dorosły · dostawka">85 <span>zł</span></div>
+          <div class="val" data-l="Dziecko · dostawka">65 <span>zł</span></div>
         </div>
         <div class="p-row">
-          <span class="fill"></span>
-          <div class="p-per">06.06 — 11.07<small>początek lata</small></div>
-          <div class="p-val">155 <span>zł</span></div><div class="p-val">135 <span>zł</span></div><div class="p-val">98 <span>zł</span></div><div class="p-val">78 <span>zł</span></div>
+          <div class="per">06.06 – 11.07<small>początek lata</small></div>
+          <div class="val" data-l="Dorosły">155 <span>zł</span></div>
+          <div class="val" data-l="Dziecko">135 <span>zł</span></div>
+          <div class="val" data-l="Dorosły · dostawka">98 <span>zł</span></div>
+          <div class="val" data-l="Dziecko · dostawka">78 <span>zł</span></div>
         </div>
         <div class="p-row">
-          <span class="fill"></span>
-          <div class="p-per">11.07 — 16.08<span class="hot-badge">sezon wysoki</span><small>pełnia lata</small></div>
-          <div class="p-val">170 <span>zł</span></div><div class="p-val">150 <span>zł</span></div><div class="p-val">105 <span>zł</span></div><div class="p-val">85 <span>zł</span></div>
+          <div class="per">11.07 – 16.08<span class="hot">sezon</span><small>pełnia lata</small></div>
+          <div class="val" data-l="Dorosły">170 <span>zł</span></div>
+          <div class="val" data-l="Dziecko">150 <span>zł</span></div>
+          <div class="val" data-l="Dorosły · dostawka">105 <span>zł</span></div>
+          <div class="val" data-l="Dziecko · dostawka">85 <span>zł</span></div>
         </div>
         <div class="p-row">
-          <span class="fill"></span>
-          <div class="p-per">16.08 — 30.08<small>koniec lata</small></div>
-          <div class="p-val">155 <span>zł</span></div><div class="p-val">135 <span>zł</span></div><div class="p-val">98 <span>zł</span></div><div class="p-val">78 <span>zł</span></div>
+          <div class="per">16.08 – 30.08<small>koniec lata</small></div>
+          <div class="val" data-l="Dorosły">155 <span>zł</span></div>
+          <div class="val" data-l="Dziecko">135 <span>zł</span></div>
+          <div class="val" data-l="Dorosły · dostawka">98 <span>zł</span></div>
+          <div class="val" data-l="Dziecko · dostawka">78 <span>zł</span></div>
         </div>
         <div class="p-row">
-          <span class="fill"></span>
-          <div class="p-per">od 30.08<small>złota jesień</small></div>
-          <div class="p-val">130 <span>zł</span></div><div class="p-val">110 <span>zł</span></div><div class="p-val">85 <span>zł</span></div><div class="p-val">65 <span>zł</span></div>
+          <div class="per">od 30.08<small>złota jesień</small></div>
+          <div class="val" data-l="Dorosły">130 <span>zł</span></div>
+          <div class="val" data-l="Dziecko">110 <span>zł</span></div>
+          <div class="val" data-l="Dorosły · dostawka">85 <span>zł</span></div>
+          <div class="val" data-l="Dziecko · dostawka">65 <span>zł</span></div>
         </div>
       </div>
 
       <div class="p-notes rv">
-        <div><span class="n-idx">( i )</span><b>Dzieci do lat 4 — bezpłatnie</b> (bez osobnego łóżka i wyżywienia). Dzieci do lat 11 — pobyt z 1/2 wyżywienia.</div>
-        <div><span class="n-idx">( ii )</span>Cena zawiera zakwaterowanie w pokoju z łazienką, TV, 2 posiłki w formie bufetu i podatek 8% VAT. Nie zawiera opłaty miejscowej.</div>
-        <div><span class="n-idx">( iii )</span><b>Ceny obowiązują przy pobycie min. 7 noclegów</b> — poniżej dodatkowa opłata. Pozostałe usługi negocjowane indywidualnie.</div>
+        <div><b>Dzieci do lat 4 — bezpłatnie</b> (bez osobnego łóżka i wyżywienia). Dzieci do lat 11 — pobyt z 1/2 wyżywienia.</div>
+        <div>Cena nie zawiera opłaty miejscowej. Pozostałe usługi negocjowane indywidualnie.</div>
+        <div><b>Ceny przy pobycie min. 7 noclegów</b> — przy krótszym pobycie dodatkowa opłata.</div>
       </div>
     </div>
   </section>
@@ -292,9 +289,9 @@
   <!-- ============ BUNGALOW ============ -->
   <section id="bungalow">
     <div class="wrap">
-      <div class="sec-label rv"><span>Bungalow</span><span class="no">( 05 )</span></div>
+      <div class="sec-head rv"><span class="eyebrow">Bungalow</span><span class="no">( 05 )</span></div>
       <div class="b-grid">
-        <div class="b-media rv">
+        <div class="slider rv">
           <div class="frame">
             <img src="images/bungalow/01.jpg" alt="Bungalow — widok zewnętrzny" class="on">
             <img src="images/bungalow/02.jpg" alt="Bungalow" loading="lazy">
@@ -304,16 +301,18 @@
             <img src="images/bungalow/06.jpg" alt="Bungalow — wnętrze" loading="lazy">
             <img src="images/bungalow/07.jpg" alt="Bungalow — taras" loading="lazy">
           </div>
-          <span class="count">1 / 7</span>
-          <div class="b-ctrl">
-            <button class="b-prev" aria-label="Poprzednie">←</button>
-            <button class="b-next" aria-label="Następne">→</button>
+          <div class="s-bar">
+            <span class="s-count">1 / 7</span>
+            <div class="s-nav">
+              <button class="ctrl-btn s-prev" aria-label="Poprzednie">←</button>
+              <button class="ctrl-btn s-next" aria-label="Następne">→</button>
+            </div>
           </div>
         </div>
 
         <div class="b-copy">
-          <h2 class="h-giant rv">Twój własny <em>domek letni</em></h2>
-          <p class="rv">Komfortowy bungalow dla 4 osób — pełna prywatność, własny taras i wszystko, czego potrzebujesz na wakacje we dwoje albo z rodziną.</p>
+          <h2 class="t-section rv">Twój własny <em>letni domek</em></h2>
+          <p class="rv">Komfortowy bungalow dla 4 osób — pełna prywatność, własny taras i wszystko, czego potrzeba na wakacje z rodziną.</p>
           <ul class="b-feats rv">
             <li>Salon + oddzielna sypialnia dla 2 osób <i>przestrzeń</i></li>
             <li>W pełni wyposażony aneks kuchenny <i>samodzielność</i></li>
@@ -323,7 +322,7 @@
           </ul>
           <div class="b-price rv">
             <div class="p1"><b>450 zł</b><span>za dobę / domek</span></div>
-            <div class="p2"><span class="promo-tag">Promocja · wrzesień</span><b>290 zł</b><span>za dobę</span></div>
+            <div class="p2"><b>290 zł</b><span><em>Promocja</em> — wrzesień</span></div>
           </div>
           <p class="b-note rv">Preferowany okres wynajmu min. 1 tydzień. W sprawach rezerwacji — <a href="#kontakt">skontaktuj się z nami</a>.</p>
         </div>
@@ -333,20 +332,29 @@
 
   <!-- ============ BAR ============ -->
   <section id="bar">
-    <div class="bar-sticky">
-      <div class="bar-bg"></div>
-      <div class="bar-thumbs">
-        <img src="images/bar/01.jpg" data-full="images/bar/01.jpg" alt="Bar — zdjęcie 1">
-        <img src="images/bar/02.jpg" data-full="images/bar/02.jpg" alt="Bar — zdjęcie 2" class="on">
-        <img src="images/bar/03.jpg" data-full="images/bar/03.jpg" alt="Bar — zdjęcie 3">
-        <img src="images/bar/04.jpg" data-full="images/bar/04.jpg" alt="Bar — zdjęcie 4">
-      </div>
-      <div class="bar-content">
-        <div class="sec-label" style="border-color: rgba(239,234,224,0.3); margin-bottom: 26px;"><span>Bar restauracyjny</span><span class="no">( 06 )</span></div>
-        <h2 class="h-giant">Smakuje <em>jak u mamy</em></h2>
-        <div class="row">
-          <p>Zapraszamy do baru restauracyjnego w naszym domu wypoczynkowym. Domowe jedzenie zaspokoi gusta każdego smakosza kuchni polskiej i regionalnej — gotujemy wyłącznie z produktów o najwyższej świeżości i jakości.</p>
-          <div class="grill">Raz w tygodniu — biesiada grillowa</div>
+    <div class="wrap">
+      <div class="sec-head rv"><span class="eyebrow">Bar restauracyjny</span><span class="no">( 06 )</span></div>
+      <div class="b-grid">
+        <div class="b-copy">
+          <h2 class="t-section rv" style="margin-bottom: 20px;">Smakuje <em>jak u mamy</em></h2>
+          <p class="rv">Zapraszamy do baru restauracyjnego w naszym domu wypoczynkowym. Domowe jedzenie zaspokoi gusta każdego smakosza kuchni polskiej i regionalnej — gotujemy wyłącznie z produktów o najwyższej świeżości i jakości.</p>
+          <p class="grill-note rv">Raz w tygodniu organizujemy biesiadę grillową dla naszych gości.</p>
+        </div>
+
+        <div class="slider rv">
+          <div class="frame">
+            <img src="images/bar/01.jpg" alt="Bar restauracyjny" class="on">
+            <img src="images/bar/02.jpg" alt="Bar restauracyjny — sala" loading="lazy">
+            <img src="images/bar/03.jpg" alt="Bar restauracyjny" loading="lazy">
+            <img src="images/bar/04.jpg" alt="Bar restauracyjny" loading="lazy">
+          </div>
+          <div class="s-bar">
+            <span class="s-count">1 / 4</span>
+            <div class="s-nav">
+              <button class="ctrl-btn s-prev" aria-label="Poprzednie">←</button>
+              <button class="ctrl-btn s-next" aria-label="Następne">→</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -355,34 +363,34 @@
   <!-- ============ OPINIE ============ -->
   <section id="opinie">
     <div class="wrap">
-      <div class="sec-label rv"><span>Opinie gości</span><span class="no">( 07 )</span></div>
+      <div class="sec-head rv"><span class="eyebrow">Opinie gości</span><span class="no">( 07 )</span></div>
       <div class="q-stage rv">
         <div class="quote on">
           <blockquote>To nasze pierwsze wspólne wczasy nad morzem. Jesteśmy zachwyceni. Do zobaczenia za rok!</blockquote>
-          <div class="who">Marzena i Tomasz</div>
+          <p class="who">Marzena i Tomasz</p>
         </div>
         <div class="quote">
           <blockquote>Piękna pogoda, wyjątkowo ciepłe morze i znakomity pensjonat. Czego więcej trzeba na udane wczasy rodzinne?</blockquote>
-          <div class="who">Kwiatkowscy <i>lipiec 2014</i></div>
+          <p class="who">Kwiatkowscy <i>lipiec 2014</i></p>
         </div>
         <div class="quote">
           <blockquote>Jedzenie i warunki wypoczynku bardzo dobre. Jeśli pogoda dopisze, w tym roku również do Was zawitamy.</blockquote>
-          <div class="who">Włodek <i>Bytom</i></div>
+          <p class="who">Włodek <i>Bytom</i></p>
         </div>
         <div class="quote">
-          <blockquote>Dobra lokalizacja — śmiało można odpocząć od samochodu. Wszędzie blisko. Polecamy wypoczynek w rozsądnych pieniądzach.</blockquote>
-          <div class="who">Marysia i Jacek <i>Warszawa</i></div>
+          <blockquote>Dobra lokalizacja — śmiało można odpocząć od samochodu. Wszędzie blisko. Wypoczynek w rozsądnych pieniądzach.</blockquote>
+          <p class="who">Marysia i Jacek <i>Warszawa</i></p>
         </div>
         <div class="quote">
           <blockquote>Spędziliśmy tu dwa tygodnie. Warunki dobre, jedzenie dobre. Śmiało polecamy wszystkim.</blockquote>
-          <div class="who">Patrycja i Piotr <i>Białystok</i></div>
+          <p class="who">Patrycja i Piotr <i>Białystok</i></p>
         </div>
       </div>
-      <div class="q-bottom">
+      <div class="q-bar rv">
         <span class="q-idx">1 — 5</span>
-        <div class="q-ctrl">
-          <button class="q-prev" aria-label="Poprzednia opinia">←</button>
-          <button class="q-next" aria-label="Następna opinia">→</button>
+        <div class="q-nav">
+          <button class="ctrl-btn q-prev" aria-label="Poprzednia opinia">←</button>
+          <button class="ctrl-btn q-next" aria-label="Następna opinia">→</button>
         </div>
       </div>
     </div>
@@ -391,47 +399,48 @@
   <!-- ============ REZERWACJA ============ -->
   <section id="rezerwacja">
     <div class="wrap">
-      <div class="sec-label rv" style="border-color: var(--line-light);"><span>Rezerwacja</span><span class="no">( 08 )</span></div>
-      <div class="r-grid">
-        <div class="r-side">
-          <h2 class="h-giant rv">Zaklep <em>swój termin</em></h2>
-          <p class="rv">Wypełnij formularz — przygotujemy dla Ciebie ofertę i potwierdzimy dostępność. Otworzy się gotowa wiadomość e-mail z Twoim zapytaniem.</p>
-          <div class="r-alt rv">
-            <a href="tel:+48883605225">+48 883 605 225 <span>zadzwoń</span></a>
-            <a href="mailto:elstavita@elstavita.pl">elstavita@elstavita.pl <span>napisz</span></a>
+      <div class="r-card rv">
+        <div class="r-grid">
+          <div class="r-side">
+            <p class="eyebrow" style="color: inherit; opacity: 0.55; margin-bottom: 18px;">Rezerwacja</p>
+            <h2 class="t-section">Zaklep <em>swój termin</em></h2>
+            <p>Wypełnij formularz — otworzy się gotowa wiadomość e-mail z Twoim zapytaniem. Potwierdzimy dostępność i przygotujemy ofertę.</p>
+            <div class="r-alt">
+              <a href="tel:+48883605225">+48 883 605 225 <span>zadzwoń</span></a>
+              <a href="mailto:elstavita@elstavita.pl">elstavita@elstavita.pl <span>napisz</span></a>
+            </div>
           </div>
-        </div>
 
-        <form id="booking-form" class="rv">
-          <div class="fld"><label for="arrival">Przyjazd</label><input type="date" id="arrival" name="arrival" required></div>
-          <div class="fld"><label for="departure">Wyjazd</label><input type="date" id="departure" name="departure" required></div>
-          <div class="fld">
-            <label for="room">Zakwaterowanie</label>
-            <select id="room" name="room">
-              <option>Pokój 2-osobowy</option>
-              <option>Pokój 3-osobowy</option>
-              <option>Pokój 4-osobowy</option>
-              <option>Bungalow (4 osoby)</option>
-            </select>
-          </div>
-          <div class="fld">
-            <label for="adults">Dorośli</label>
-            <select id="adults" name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
-          </div>
-          <div class="fld">
-            <label for="children">Dzieci</label>
-            <select id="children" name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
-          </div>
-          <div class="fld"><label for="b-name">Imię i nazwisko</label><input type="text" id="b-name" name="name" required autocomplete="name"></div>
-          <div class="fld full"><label for="b-phone">Telefon</label><input type="tel" id="b-phone" name="phone" required autocomplete="tel"></div>
-          <div class="fld full"><label for="b-msg">Wiadomość (opcjonalnie)</label><textarea id="b-msg" name="message" rows="2" placeholder="Dostawki, pytania, preferencje…"></textarea></div>
-          <div class="submit-row">
-            <button type="submit" class="btn-big">
-              Wyślij zapytanie
-              <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 7h15M11 1l6 6-6 6"/></svg>
-            </button>
-          </div>
-        </form>
+          <form id="booking-form">
+            <div class="fld"><label for="arrival">Przyjazd</label><input type="date" id="arrival" name="arrival" required></div>
+            <div class="fld"><label for="departure">Wyjazd</label><input type="date" id="departure" name="departure" required></div>
+            <div class="fld">
+              <label for="room">Zakwaterowanie</label>
+              <select id="room" name="room">
+                <option>Pokój 2-osobowy</option>
+                <option>Pokój 3-osobowy</option>
+                <option>Pokój 4-osobowy</option>
+                <option>Bungalow (4 osoby)</option>
+              </select>
+            </div>
+            <div class="fld">
+              <label for="adults">Dorośli</label>
+              <select id="adults" name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
+            </div>
+            <div class="fld">
+              <label for="children">Dzieci</label>
+              <select id="children" name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+            </div>
+            <div class="fld"><label for="b-name">Imię i nazwisko</label><input type="text" id="b-name" name="name" required autocomplete="name"></div>
+            <div class="fld full"><label for="b-phone">Telefon</label><input type="tel" id="b-phone" name="phone" required autocomplete="tel"></div>
+            <div class="fld full"><label for="b-msg">Wiadomość (opcjonalnie)</label><textarea id="b-msg" name="message" rows="2" placeholder="Dostawki, pytania, preferencje…"></textarea></div>
+            <div class="submit-row">
+              <button type="submit" class="btn-pill">Wyślij zapytanie
+                <svg width="16" height="12" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 7h15M11 1l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -439,10 +448,10 @@
   <!-- ============ KONTAKT ============ -->
   <section id="kontakt">
     <div class="wrap">
-      <div class="sec-label rv"><span>Kontakt</span><span class="no">( 09 )</span></div>
+      <div class="sec-head rv"><span class="eyebrow">Kontakt</span><span class="no">( 08 )</span></div>
       <div class="k-grid">
         <div>
-          <h2 class="h-giant rv" style="margin-bottom: 5vh;">Do <em>zobaczenia</em></h2>
+          <h2 class="t-section rv">Do <em>zobaczenia</em></h2>
           <div class="k-list rv">
             <div><span class="lbl">Adres</span><span class="val">ul. Cetniewska 21<br>84-120 Władysławowo</span></div>
             <a href="tel:+48883605225"><span class="lbl">Telefon</span><span class="val">+48 883 605 225</span></a>
@@ -463,7 +472,7 @@
           <summary>
             <img src="images/misc/logo_unia_europejska.png" alt="Logo Unii Europejskiej">
             <span class="t">Projekt współfinansowany ze środków UE</span>
-            <span class="more">zobacz szczegóły</span>
+            <span class="more">szczegóły</span>
           </summary>
           <div class="eu-body">
             <p><b>Tytuł projektu:</b> Wzrost potencjału oraz zwiększenie odporności przedsiębiorstwa Elsta Vita</p>
@@ -485,11 +494,13 @@
   <!-- ============ FOOTER ============ -->
   <footer>
     <div class="wrap">
-      <div class="f-cta">
-        <h2 class="h-giant">Morze <em>czeka</em> na Ciebie</h2>
-        <a href="#rezerwacja" class="link-line">Zarezerwuj pobyt <span>→</span></a>
+      <div class="f-head">
+        <h2 class="t-display">Morze <em>czeka</em></h2>
+        <a href="#rezerwacja" class="btn-pill">Zarezerwuj pobyt
+          <svg width="16" height="12" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M1 7h15M11 1l6 6-6 6"/></svg>
+        </a>
       </div>
-      <div class="f-grid">
+      <div class="f-cols">
         <div>
           <h5>Elsta Vita</h5>
           <ul>
@@ -518,16 +529,11 @@
       </div>
       <div class="f-bottom">
         <span>© <span id="year">2026</span> Dom Wypoczynkowy Elsta Vita — noclegi Władysławowo</span>
-        <span>Władysławowo Cetniewo · nad samym morzem</span>
+        <span>Władysławowo Cetniewo, nad samym morzem</span>
       </div>
     </div>
-    <div class="f-watermark" aria-hidden="true">Elsta Vita</div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script>if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") gsap.registerPlugin(ScrollTrigger);</script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
