@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elsta Vita — Dom Wypoczynkowy | Noclegi Władysławowo</title>
+  <meta name="description" content="Dom Wypoczynkowy Elsta Vita we Władysławowie. Noclegi z pełnym wyżywieniem nad morzem.">
+  <link rel="icon" type="image/png" href="images/misc/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f8fafc; --white:#fff; --ink:#0b2239; --mut:#5b6b7c;
+      --blue:#0ea5e9; --blue-d:#0369a1; --navy:#0b2239; --sun:#fbbf24; --coral:#fb7185;
+      --grad:linear-gradient(100deg,#0ea5e9,#22d3ee);
+      --ln:#e3eaf1; --r:22px; --r-sm:15px;
+      --sh:0 8px 30px rgba(11,34,57,.09); --sh-lg:0 24px 60px rgba(11,34,57,.14);
+      --sans:"Sora",system-ui,sans-serif; --ease:cubic-bezier(.22,1,.36,1); --pad:clamp(20px,5vw,64px);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15.5px;line-height:1.68;-webkit-font-smoothing:antialiased;overflow-x:clip}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit;color:inherit}
+    .wrap{width:min(1180px,calc(100% - 2*var(--pad)));margin-inline:auto}
+    .chip{display:inline-flex;align-items:center;gap:7px;background:#e0f2fe;color:var(--blue-d);font-size:12.5px;font-weight:600;padding:7px 16px;border-radius:100px}
+    .t-hero{font-weight:800;font-size:clamp(34px,7vw,64px);line-height:1.08;letter-spacing:-.025em}
+    .t-sec{font-weight:800;font-size:clamp(26px,4.4vw,42px);line-height:1.12;letter-spacing:-.02em}
+    .grad-txt{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    section{padding:clamp(64px,10vh,110px) 0 0}
+    .sec-head{text-align:center;max-width:640px;margin:0 auto clamp(30px,5vh,50px)}
+    .sec-head .chip{margin-bottom:16px}
+    .sec-head p{color:var(--mut);margin-top:12px;font-size:15px}
+    /* header */
+    #site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:12px 0;transition:padding .3s}
+    #site-header .bar{display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--ln);border-radius:100px;padding:10px 12px 10px 24px;box-shadow:var(--sh)}
+    .logo{font-weight:800;font-size:19px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+    .logo .dot{width:34px;height:34px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;flex-shrink:0}
+    #site-header nav{display:flex;align-items:center;gap:4px}
+    #site-header nav a{font-size:13.5px;font-weight:600;color:var(--mut);padding:9px 14px;border-radius:100px;transition:background .2s,color .2s}
+    #site-header nav a:hover{background:#eef6fc;color:var(--ink)}
+    #site-header nav a.cta{background:var(--grad);color:#fff;padding:11px 22px;margin-left:6px;box-shadow:0 6px 18px rgba(14,165,233,.4)}
+    #burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer;position:relative}
+    #burger i{position:absolute;left:10px;right:10px;height:2.4px;border-radius:2px;background:var(--ink);transition:transform .35s var(--ease),top .35s var(--ease)}
+    #burger i:first-child{top:15px}#burger i:last-child{top:24px}
+    body.menu-open #burger i:first-child{top:19px;transform:rotate(45deg)}
+    body.menu-open #burger i:last-child{top:19px;transform:rotate(-45deg)}
+    #mobile-menu{position:fixed;inset:0;z-index:90;background:rgba(248,250,252,.98);backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;padding:var(--pad);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+    body.menu-open #mobile-menu{opacity:1;visibility:visible}
+    body.menu-open{overflow:hidden}
+    #mobile-menu a{font-size:clamp(24px,6.5vw,34px);font-weight:700;padding:12px 4px;border-bottom:1px solid var(--ln);display:flex;justify-content:space-between;align-items:center}
+    #mobile-menu a span{font-size:12px;font-weight:600;color:var(--blue)}
+    #mobile-menu .mm-contact{margin-top:28px;display:grid;gap:6px;font-size:14px;color:var(--mut)}
+    #mobile-menu .mm-contact a{font-size:16px;font-weight:600;color:var(--ink);border:0;padding:0;display:block}
+    /* hero */
+    #start{padding-top:calc(86px + clamp(30px,6vh,70px))}
+    .hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+    .hero .chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+    .hero h1{margin-bottom:20px}
+    .hero p.lede{color:var(--mut);font-size:clamp(15px,1.5vw,17.5px);max-width:46ch;margin-bottom:30px}
+    .hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--grad);color:#fff;font-weight:700;font-size:15px;padding:16px 32px;border-radius:100px;border:0;cursor:pointer;box-shadow:0 10px 26px rgba(14,165,233,.4);transition:transform .25s var(--ease),box-shadow .25s}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(14,165,233,.5)}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;color:var(--ink);padding:15px 26px;border-radius:100px;border:2px solid var(--ln);background:#fff;transition:border-color .2s,transform .25s var(--ease)}
+    .btn-ghost:hover{border-color:var(--blue);transform:translateY(-3px)}
+    .hero-media{position:relative}
+    .hero-media .main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3.4;box-shadow:var(--sh-lg)}
+    .hero-media .main img{width:100%;height:100%;object-fit:cover}
+    .float{position:absolute;background:#fff;border-radius:var(--r-sm);box-shadow:var(--sh-lg);padding:13px 18px;display:flex;align-items:center;gap:11px;font-size:13px;font-weight:600}
+    .float .ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:17px;flex-shrink:0}
+    .float small{display:block;font-weight:500;color:var(--mut);font-size:11.5px}
+    .float.f1{top:18px;left:-26px}
+    .float.f1 .ic{background:#e0f2fe}
+    .float.f2{bottom:24px;right:-20px}
+    .float.f2 .ic{background:#fef3c7}
+    /* facts */
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(44px,7vh,70px)}
+    .facts>div{background:#fff;border:1px solid var(--ln);border-radius:var(--r-sm);padding:22px 20px;box-shadow:var(--sh);transition:transform .3s var(--ease)}
+    .facts>div:hover{transform:translateY(-4px)}
+    .facts b{display:block;font-size:clamp(22px,2.6vw,30px);font-weight:800;letter-spacing:-.02em}
+    .facts b.c1{color:var(--blue)} .facts b.c2{color:#f59e0b} .facts b.c3{color:#10b981} .facts b.c4{color:var(--coral)}
+    .facts span{font-size:12.5px;color:var(--mut);font-weight:500}
+    /* o nas */
+    #onas .card{background:#fff;border:1px solid var(--ln);border-radius:var(--r);box-shadow:var(--sh);padding:clamp(24px,4vw,54px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,64px);align-items:center}
+    #onas .ph{border-radius:var(--r-sm);overflow:hidden;aspect-ratio:4/3}
+    #onas .ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+    #onas .ph:hover img{transform:scale(1.05)}
+    #onas .copy p{color:var(--mut);margin-bottom:16px}
+    #onas .copy p b{color:var(--ink);font-weight:600}
+    #onas .t-sec{margin-bottom:18px}
+    /* atrakcje */
+    .am-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .am-card{background:#fff;border:1px solid var(--ln);border-radius:var(--r-sm);padding:24px 22px;box-shadow:var(--sh);transition:transform .3s var(--ease),box-shadow .3s}
+    .am-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
+    .am-card .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:14px}
+    .am-card h3{font-size:15.5px;font-weight:700;margin-bottom:4px}
+    .am-card p{font-size:12.5px;color:var(--mut)}
+    .atuty{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:clamp(30px,5vh,44px)}
+    .atuty>div{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--ln);border-radius:100px;padding:10px 20px 10px 12px;box-shadow:var(--sh);font-size:13px;font-weight:600}
+    .atuty b{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700;flex-shrink:0;line-height:1.1;text-align:center}
+    .atuty b i{font-style:normal;font-size:8.5px;display:block;opacity:.7}
+    /* galeria */
+    .g-masonry{columns:3;column-gap:14px}
+    .g-item{display:block;width:100%;border:0;padding:0;background:none;border-radius:var(--r-sm);overflow:hidden;margin-bottom:14px;cursor:zoom-in;position:relative;break-inside:avoid;box-shadow:var(--sh)}
+    .g-item img{width:100%;transition:transform .6s var(--ease)}
+    .g-item:hover img{transform:scale(1.05)}
+    .g-item::after{content:attr(data-title);position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);color:var(--ink);font-size:12px;font-weight:700;padding:7px 14px;border-radius:100px;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+    .g-item:hover::after{opacity:1;transform:translateY(0)}
+    /* lightbox */
+    #lightbox{position:fixed;inset:0;z-index:300;background:rgba(11,34,57,.95);display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+    #lightbox.open{display:flex}
+    #lightbox img{max-width:min(1100px,92vw);max-height:74vh;object-fit:contain;border-radius:14px}
+    #lightbox .lb-cap{color:#fff;text-align:center;margin-top:18px;max-width:560px}
+    #lightbox .lb-cap h4{font-weight:700;font-size:17px}
+    #lightbox .lb-cap p{font-size:13px;opacity:.7;margin-top:4px}
+    #lightbox button{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:17px;cursor:pointer;transition:background .25s}
+    #lightbox button:hover{background:rgba(255,255,255,.3)}
+    #lightbox .lb-close{top:18px;right:18px}
+    #lightbox .lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+    #lightbox .lb-next{right:14px;top:50%;transform:translateY(-50%)}
+    /* cennik: karty sezonów */
+    .season-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .season{background:#fff;border:1px solid var(--ln);border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--sh);transition:transform .3s var(--ease)}
+    .season:hover{transform:translateY(-5px)}
+    .season .s-top{padding:16px;text-align:center;color:#fff;background:var(--navy)}
+    .season.hot .s-top{background:var(--grad)}
+    .season .s-top b{display:block;font-size:16px;font-weight:800}
+    .season .s-top span{font-size:11px;opacity:.8;font-weight:500}
+    .season .s-top .tag{display:inline-block;background:#fff;color:var(--blue-d);font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:100px;margin-top:7px}
+    .season ul{list-style:none;padding:16px}
+    .season li{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12px;color:var(--mut);padding:7px 0;border-bottom:1px dashed var(--ln)}
+    .season li:last-child{border-bottom:0}
+    .season li b{font-size:15.5px;font-weight:800;color:var(--ink);white-space:nowrap}
+    .p-notes{margin-top:clamp(26px,4vh,40px);display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .p-notes>div{background:#fff;border:1px solid var(--ln);border-radius:var(--r-sm);padding:18px 20px;font-size:13px;color:var(--mut);line-height:1.65;display:flex;gap:12px;align-items:flex-start;box-shadow:var(--sh)}
+    .p-notes .em{font-size:19px;flex-shrink:0}
+    .p-notes b{color:var(--ink)}
+    /* bungalow / bar */
+    .split-card{background:#fff;border:1px solid var(--ln);border-radius:var(--r);box-shadow:var(--sh);padding:clamp(22px,3.5vw,46px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,60px);align-items:center}
+    .slider .frame{position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:var(--r-sm);background:#eef2f6}
+    .slider .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .55s var(--ease)}
+    .slider .frame img.on{opacity:1}
+    .slider .s-bar{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+    .slider .s-count{font-size:13px;font-weight:700;color:var(--mut)}
+    .ctrl-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--ln);background:#fff;font-size:15px;cursor:pointer;transition:all .25s;display:grid;place-items:center}
+    .ctrl-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .s-nav,.q-nav{display:flex;gap:8px}
+    .b-feats{list-style:none;margin:20px 0;display:grid;gap:9px}
+    .b-feats li{display:flex;align-items:center;gap:11px;font-size:14px;font-weight:500}
+    .b-feats li .tick{width:24px;height:24px;border-radius:50%;background:#d1fae5;color:#059669;display:grid;place-items:center;font-size:12px;font-weight:800;flex-shrink:0}
+    .b-price{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .b-price .p1{background:var(--navy);color:#fff;border-radius:var(--r-sm);padding:14px 24px}
+    .b-price .p1 b{font-size:26px;font-weight:800}
+    .b-price .p1 span{display:block;font-size:11px;opacity:.75}
+    .b-price .p2{background:#fef3c7;border:2px dashed var(--sun);border-radius:var(--r-sm);padding:12px 22px}
+    .b-price .p2 b{font-size:22px;font-weight:800;color:#b45309}
+    .b-price .p2 span{display:block;font-size:11px;color:#92400e;font-weight:700}
+    .b-note{margin-top:16px;font-size:13px;color:var(--mut)}
+    .b-note a{color:var(--blue-d);font-weight:700}
+    #bungalow .t-sec,#bar .t-sec{margin-bottom:14px}
+    #bungalow .copy>p,#bar .copy>p{color:var(--mut)}
+    #bar .grill{display:flex;align-items:center;gap:12px;background:#fff7ed;border:1px solid #fed7aa;border-radius:var(--r-sm);padding:14px 18px;font-weight:700;font-size:14px;color:#9a3412;margin-top:18px}
+    /* opinie */
+    #opinie .q-card{background:#fff;border:1px solid var(--ln);border-radius:var(--r);box-shadow:var(--sh);max-width:760px;margin:0 auto;padding:clamp(26px,4vw,50px);text-align:center}
+    #opinie .q-stage{position:relative;min-height:190px}
+    #opinie .quote{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    #opinie .quote.on{opacity:1;visibility:visible}
+    #opinie .stars{color:var(--sun);letter-spacing:4px;font-size:16px;margin-bottom:14px}
+    #opinie blockquote{font-size:clamp(16px,2vw,20px);font-weight:500;line-height:1.6;max-width:52ch}
+    #opinie .who{margin-top:16px;font-size:13px;font-weight:700}
+    #opinie .who i{font-style:normal;color:var(--mut);font-weight:500;margin-left:8px}
+    #opinie .q-bar{display:flex;justify-content:center;align-items:center;gap:20px;margin-top:22px}
+    #opinie .q-idx{font-size:13px;font-weight:700;color:var(--mut)}
+    /* rezerwacja */
+    #rezerwacja .r-card{background:var(--navy);border-radius:var(--r);padding:clamp(26px,4.5vw,60px);color:#fff;position:relative;overflow:hidden}
+    #rezerwacja .r-card::before{content:"";position:absolute;top:-120px;right:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(14,165,233,.35),transparent 70%)}
+    #rezerwacja .r-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(28px,4.5vw,70px);position:relative}
+    #rezerwacja .r-side .chip{background:rgba(14,165,233,.2);color:#7dd3fc}
+    #rezerwacja .r-side h2{margin:14px 0 16px}
+    #rezerwacja .r-side p{font-size:14.5px;opacity:.75;max-width:40ch}
+    #rezerwacja .r-alt{margin-top:26px;display:grid;gap:10px}
+    #rezerwacja .r-alt a{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-sm);padding:14px 18px;font-weight:700;font-size:14.5px;transition:background .25s}
+    #rezerwacja .r-alt a:hover{background:rgba(255,255,255,.14)}
+    #rezerwacja .r-alt a span{font-size:11.5px;font-weight:500;opacity:.6}
+    #rezerwacja form{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-content:start}
+    #rezerwacja .fld.full{grid-column:1/-1}
+    #rezerwacja label{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.65;margin-bottom:6px}
+    #rezerwacja input,#rezerwacja select,#rezerwacja textarea{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;color:#fff;font-family:var(--sans);font-size:14.5px;padding:13px 15px;transition:border-color .25s,background .25s}
+    #rezerwacja select{appearance:none;cursor:pointer}
+    #rezerwacja select option{color:var(--ink);background:#fff}
+    #rezerwacja input:focus,#rezerwacja select:focus,#rezerwacja textarea:focus{outline:none;border-color:var(--blue);background:rgba(255,255,255,.12)}
+    #rezerwacja input[type="date"]{color-scheme:dark;min-height:47px}
+    #rezerwacja textarea{resize:vertical;min-height:56px}
+    #rezerwacja .submit-row{grid-column:1/-1;margin-top:4px}
+    /* kontakt */
+    #kontakt .k-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(20px,3vw,30px);align-items:stretch}
+    .k-cards{display:grid;gap:14px;align-content:start}
+    .k-card{background:#fff;border:1px solid var(--ln);border-radius:var(--r-sm);padding:18px 20px;display:flex;gap:15px;align-items:center;box-shadow:var(--sh);transition:transform .25s var(--ease)}
+    .k-card:hover{transform:translateY(-3px)}
+    .k-card .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:20px;flex-shrink:0}
+    .k-card h4{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--mut)}
+    .k-card p,.k-card a.v{font-size:15px;font-weight:600}
+    #kontakt .map-wrap{border-radius:var(--r);overflow:hidden;border:1px solid var(--ln);box-shadow:var(--sh);min-height:340px}
+    #kontakt .map-wrap iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+    /* projekt UE */
+    #projekty{margin-top:clamp(64px,10vh,110px);padding:clamp(36px,6vh,56px) 0;background:#fff;border-top:1px solid var(--ln)}
+    #projekty summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    #projekty summary::-webkit-details-marker{display:none}
+    #projekty summary img{height:26px;width:auto}
+    #projekty summary .t{font-size:13px;font-weight:600}
+    #projekty summary .more{margin-left:auto;font-size:13px;font-weight:700;color:var(--blue-d)}
+    #projekty .eu-body{margin-top:22px;max-width:74ch;display:grid;gap:12px;font-size:13.5px;color:var(--mut);line-height:1.75}
+    #projekty .eu-body b{color:var(--ink)}
+    #projekty .eu-body .fund{display:inline-block;background:#e0f2fe;color:var(--blue-d);font-weight:800;padding:8px 18px;border-radius:100px}
+    #projekty .eu-body ul{padding-left:18px;display:grid;gap:6px}
+    #projekty .eu-body .logos img{max-width:560px;width:100%;margin-top:8px}
+    /* footer */
+    footer{background:var(--navy);color:#fff;padding:clamp(50px,8vh,84px) 0 96px;margin-top:0}
+    footer .f-head{text-align:center;margin-bottom:clamp(36px,6vh,60px)}
+    footer .f-head h2{font-size:clamp(28px,5vw,46px);font-weight:800;letter-spacing:-.02em;margin-bottom:22px}
+    footer .f-head h2 .grad-txt{background:linear-gradient(100deg,#38bdf8,#4ade80);-webkit-background-clip:text;background-clip:text}
+    footer .f-cols{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.1);padding-top:32px;margin-bottom:36px;font-size:14px}
+    footer .f-cols h5{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;opacity:.5;margin-bottom:12px}
+    footer .f-cols ul{list-style:none;display:grid;gap:8px}
+    footer .f-cols li{opacity:.85}
+    footer .f-cols a:hover{color:#38bdf8}
+    footer .f-bottom{text-align:center;font-size:12px;opacity:.5}
+    /* reveal */
+    .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+    .rv.visible{opacity:1;transform:translateY(0)}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+    /* ===== responsive ===== */
+    @media(max-width:1024px){
+      .am-grid{grid-template-columns:repeat(2,1fr)}
+      .season-grid{grid-template-columns:repeat(3,1fr)}
+      .g-masonry{columns:2}
+    }
+    @media(max-width:920px){
+      #site-header nav{display:none}
+      #burger{display:block}
+      .hero{grid-template-columns:1fr}
+      .hero-media .main{aspect-ratio:16/10}
+      .float.f1{left:8px}
+      .float.f2{right:8px}
+      #onas .card,.split-card,#rezerwacja .r-grid,#kontakt .k-grid{grid-template-columns:1fr}
+      #bar .split-card .copy{order:2}
+      .p-notes{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .facts{grid-template-columns:1fr 1fr;gap:10px}
+      .am-grid{grid-template-columns:1fr 1fr;gap:10px}
+      .am-card{padding:18px 16px}
+      .season-grid{grid-template-columns:1fr 1fr;gap:10px}
+      .g-masonry{columns:1}
+      #rezerwacja form{grid-template-columns:1fr}
+      .btn{width:100%;justify-content:center}
+      .hero-cta .btn-ghost{width:100%;justify-content:center}
+      .season.hot{grid-column:1/-1}
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="wrap bar">
+      <a href="#start" class="logo"><span class="dot">☀</span>Elsta Vita</a>
+      <nav>
+        <a href="#onas">O nas</a>
+        <a href="#atrakcje">Atrakcje</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#bungalow">Bungalow</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#rezerwacja" class="cta">Rezerwacja</a>
+      </nav>
+      <button id="burger" aria-label="Menu"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div id="mobile-menu">
+    <a href="#onas">O nas <span>→</span></a>
+    <a href="#atrakcje">Atrakcje <span>→</span></a>
+    <a href="#galeria">Galeria <span>→</span></a>
+    <a href="#cennik">Cennik <span>→</span></a>
+    <a href="#bungalow">Bungalow <span>→</span></a>
+    <a href="#opinie">Opinie <span>→</span></a>
+    <a href="#rezerwacja">Rezerwacja <span>→</span></a>
+    <a href="#kontakt">Kontakt <span>→</span></a>
+    <div class="mm-contact">
+      <a href="tel:+48883605225">+48 883 605 225</a>
+      <a href="mailto:elstavita@elstavita.pl">elstavita@elstavita.pl</a>
+      <span>ul. Cetniewska 21, 84-120 Władysławowo</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="start">
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <div class="chips rv">
+            <span class="chip">🌊 10 min do plaży</span>
+            <span class="chip" style="background:#fef3c7;color:#92400e;">🍽 Pełne wyżywienie</span>
+          </div>
+          <h1 class="t-hero rv">Rodzinne wakacje <span class="grad-txt">nad morzem</span>, które pokochacie</h1>
+          <p class="lede rv">Dom Wypoczynkowy Elsta Vita we Władysławowie — noclegi z pełnym wyżywieniem, domowa kuchnia i mnóstwo atrakcji dla dzieci. Wszystko w jednej cenie.</p>
+          <div class="hero-cta rv">
+            <a href="#rezerwacja" class="btn">Zarezerwuj pobyt →</a>
+            <a href="#cennik" class="btn-ghost">Zobacz cennik</a>
+          </div>
+        </div>
+        <div class="hero-media rv">
+          <div class="main"><img src="images/misc/background.jpg" alt="Plaża we Władysławowie" fetchpriority="high"></div>
+          <div class="float f1"><span class="ic">🏖</span><div>Plaża Władysławowo<small>10 minut spacerem</small></div></div>
+          <div class="float f2"><span class="ic">💰</span><div>Nocleg od 65 zł<small>z wyżywieniem</small></div></div>
+        </div>
+      </div>
+
+      <div class="facts rv">
+        <div><b class="c1">10 min</b><span>spacerem na plażę</span></div>
+        <div><b class="c2">2 posiłki</b><span>dziennie — bufet</span></div>
+        <div><b class="c3">od 65 zł</b><span>nocleg z wyżywieniem</span></div>
+        <div><b class="c4">2–4 os.</b><span>pokoje z łazienkami</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O NAS -->
+  <section id="onas">
+    <div class="wrap">
+      <div class="card rv">
+        <div class="copy">
+          <span class="chip">O nas</span>
+          <h2 class="t-sec" style="margin-top:14px;">Miejsce stworzone dla <span class="grad-txt">rodzin</span></h2>
+          <p>Dom Wypoczynkowy Elsta Vita zaprasza do spędzenia wypoczynku we Władysławowie. Oferujemy <b>noclegi z pełnym wyżywieniem</b> — tanie noclegi nad morzem, blisko plaży i z pysznym jedzeniem.</p>
+          <p>Dojedziesz do nas własnym transportem lub koleją — dworzec PKP Władysławowo mamy niedaleko. Teren ośrodka jest ogrodzony, z wygodnym parkingiem.</p>
+        </div>
+        <div class="ph"><img src="images/gallery/DSC_5331_DxO-1280x720.jpg" alt="Dom Wypoczynkowy Elsta Vita" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATRAKCJE -->
+  <section id="atrakcje">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="chip">Atrakcje</span>
+        <h2 class="t-sec">Nudów nie będzie</h2>
+        <p>Wszystko na miejscu — a najlepsze atrakcje Władysławowa kilka minut od nas.</p>
+      </div>
+      <div class="am-grid rv">
+        <div class="am-card"><span class="ic" style="background:#fee2e2;">🍲</span><h3>Wyśmienita kuchnia</h3><p>2 posiłki dziennie w formie bufetu</p></div>
+        <div class="am-card"><span class="ic" style="background:#e0f2fe;">🚗</span><h3>Parking</h3><p>Ogrodzony teren ośrodka</p></div>
+        <div class="am-card"><span class="ic" style="background:#fef3c7;">🛝</span><h3>Mini plac zabaw</h3><p>Frajda dla najmłodszych</p></div>
+        <div class="am-card"><span class="ic" style="background:#f3e8ff;">🧸</span><h3>Pokój zabaw</h3><p>Idealny na deszczowe dni</p></div>
+        <div class="am-card"><span class="ic" style="background:#ffedd5;">🔥</span><h3>Grill</h3><p>Biesiada raz w tygodniu</p></div>
+        <div class="am-card"><span class="ic" style="background:#dbeafe;">📶</span><h3>Dostęp WiFi</h3><p>W całym obiekcie</p></div>
+        <div class="am-card"><span class="ic" style="background:#d1fae5;">🚲</span><h3>Wypożyczalnia rowerów</h3><p>Nadmorskie szlaki rowerowe</p></div>
+        <div class="am-card"><span class="ic" style="background:#fce7f3;">🏐</span><h3>Boisko do siatkówki</h3><p>Aktywny wypoczynek</p></div>
+      </div>
+      <div class="atuty rv">
+        <div><b>5<i>min</i></b>Aleja Gwiazd, Kościół</div>
+        <div><b>10<i>min</i></b>Plaża, Basen / COS Cetniewo</div>
+        <div><b>15<i>min</i></b>Ocean Park, Lemon Park, Park linowy</div>
+        <div><b>20<i>min</i></b>Taras widokowy, Lunapark, Muzeum motyli</div>
+        <div><b>30<i>min</i></b>KartCenter</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="chip">Galeria</span>
+        <h2 class="t-sec">Zobacz, jak u nas jest</h2>
+        <p>Kliknij zdjęcie, żeby powiększyć.</p>
+      </div>
+      <div class="g-masonry rv">
+        <button class="g-item" data-title="Ośrodek" data-desc="Teren pensjonatu jest ogrodzony z możliwością dogodnego zaparkowania samochodu."><img src="images/gallery/DSC_5331_DxO-1280x720.jpg" alt="Dom Wczasowy Elsta Vita" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc="Pokoje 2, 3 i 4-osobowe z łazienkami. TV bezpłatnie."><img src="images/gallery/109-5-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc="Pokoje z możliwością dostawek."><img src="images/gallery/Wladek1-47-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Poddasze" data-desc="Klimatyczne pokoje na poddaszu."><img src="images/gallery/210-4-1224x720.jpg" alt="Pokój na poddaszu" loading="lazy"></button>
+        <button class="g-item" data-title="Poddasze" data-desc="Każdy pokój z łazienką."><img src="images/gallery/302-3-1280x720.jpg" alt="Pokój na poddaszu" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc="Pokoje 2 i 3-osobowe."><img src="images/gallery/101-1-1269x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc="TV dla gości bezpłatnie."><img src="images/gallery/113-2-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc=""><img src="images/gallery/213-3-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc=""><img src="images/gallery/106-6-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc=""><img src="images/gallery/106-7-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Pokoje" data-desc=""><img src="images/gallery/104-3-1224x720.jpg" alt="Pokój" loading="lazy"></button>
+        <button class="g-item" data-title="Jadalnia" data-desc="Dwa posiłki dziennie w formie bufetu."><img src="images/gallery/Jad-5-1224x720.jpg" alt="Jadalnia" loading="lazy"></button>
+        <button class="g-item" data-title="Łazienki" data-desc="Każdy pokój z kabiną prysznicową."><img src="images/gallery/107-4-816x720.jpg" alt="Łazienka" loading="lazy"></button>
+        <button class="g-item" data-title="Ośrodek" data-desc="Najlepsze miejsce na nocleg we Władysławowie."><img src="images/gallery/DSC_5262_DxO-1280x720.jpg" alt="Elsta Vita" loading="lazy"></button>
+        <button class="g-item" data-title="Plac zabaw" data-desc="Mini plac zabaw dla dzieci."><img src="images/gallery/DSC_5334_DxO-1280x720.jpg" alt="Plac zabaw" loading="lazy"></button>
+        <button class="g-item" data-title="Bawialnia" data-desc="Pomieszczenie pełne zabawek — konkursy w deszczowe dni."><img src="images/gallery/DSC_5338_DxO-1280x720.jpg" alt="Bawialnia" loading="lazy"></button>
+        <button class="g-item" data-title="Sala gier" data-desc="Ping pong, piłkarzyki, dart."><img src="images/gallery/DSC_5343_DxO-1280x720.jpg" alt="Sala gier" loading="lazy"></button>
+        <button class="g-item" data-title="Jadalnia" data-desc=""><img src="images/gallery/Jad-3-1280x720.jpg" alt="Jadalnia" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox">
+    <button class="lb-close" aria-label="Zamknij">✕</button>
+    <button class="lb-prev" aria-label="Poprzednie">←</button>
+    <img src="" alt="">
+    <div class="lb-cap"><h4></h4><p></p></div>
+    <button class="lb-next" aria-label="Następne">→</button>
+  </div>
+
+  <!-- CENNIK -->
+  <section id="cennik">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="chip">Cennik</span>
+        <h2 class="t-sec">Proste ceny za osobę / dobę</h2>
+        <p>Nocleg w pokoju z łazienką i TV + 2 posiłki dziennie (bufet). 8% VAT w cenie.</p>
+      </div>
+      <div class="season-grid rv">
+        <div class="season">
+          <div class="s-top"><b>do 06.06</b><span>wiosna</span></div>
+          <ul>
+            <li>Dorosły <b>130 zł</b></li>
+            <li>Dziecko <b>110 zł</b></li>
+            <li>Dorosły · dostawka <b>85 zł</b></li>
+            <li>Dziecko · dostawka <b>65 zł</b></li>
+          </ul>
+        </div>
+        <div class="season">
+          <div class="s-top"><b>06.06 – 11.07</b><span>początek lata</span></div>
+          <ul>
+            <li>Dorosły <b>155 zł</b></li>
+            <li>Dziecko <b>135 zł</b></li>
+            <li>Dorosły · dostawka <b>98 zł</b></li>
+            <li>Dziecko · dostawka <b>78 zł</b></li>
+          </ul>
+        </div>
+        <div class="season hot">
+          <div class="s-top"><b>11.07 – 16.08</b><span>pełnia lata</span><br><span class="tag">Sezon wysoki</span></div>
+          <ul>
+            <li>Dorosły <b>170 zł</b></li>
+            <li>Dziecko <b>150 zł</b></li>
+            <li>Dorosły · dostawka <b>105 zł</b></li>
+            <li>Dziecko · dostawka <b>85 zł</b></li>
+          </ul>
+        </div>
+        <div class="season">
+          <div class="s-top"><b>16.08 – 30.08</b><span>koniec lata</span></div>
+          <ul>
+            <li>Dorosły <b>155 zł</b></li>
+            <li>Dziecko <b>135 zł</b></li>
+            <li>Dorosły · dostawka <b>98 zł</b></li>
+            <li>Dziecko · dostawka <b>78 zł</b></li>
+          </ul>
+        </div>
+        <div class="season">
+          <div class="s-top"><b>od 30.08</b><span>złota jesień</span></div>
+          <ul>
+            <li>Dorosły <b>130 zł</b></li>
+            <li>Dziecko <b>110 zł</b></li>
+            <li>Dorosły · dostawka <b>85 zł</b></li>
+            <li>Dziecko · dostawka <b>65 zł</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-notes rv">
+        <div><span class="em">👶</span><span><b>Dzieci do lat 4 — bezpłatnie</b> (bez osobnego łóżka i wyżywienia). Dzieci do lat 11 — pobyt z 1/2 wyżywienia.</span></div>
+        <div><span class="em">🧾</span><span>Cena nie zawiera opłaty miejscowej. Pozostałe usługi negocjowane indywidualnie.</span></div>
+        <div><span class="em">📅</span><span><b>Ceny przy pobycie min. 7 noclegów</b> — przy krótszym pobycie dodatkowa opłata.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUNGALOW -->
+  <section id="bungalow">
+    <div class="wrap">
+      <div class="split-card rv">
+        <div class="slider">
+          <div class="frame">
+            <img src="images/bungalow/01.jpg" alt="Bungalow" class="on">
+            <img src="images/bungalow/02.jpg" alt="Bungalow" loading="lazy">
+            <img src="images/bungalow/03.jpg" alt="Bungalow — wnętrze" loading="lazy">
+            <img src="images/bungalow/04.jpg" alt="Bungalow — wnętrze" loading="lazy">
+            <img src="images/bungalow/05.jpg" alt="Bungalow — wnętrze" loading="lazy">
+            <img src="images/bungalow/06.jpg" alt="Bungalow — wnętrze" loading="lazy">
+            <img src="images/bungalow/07.jpg" alt="Bungalow — taras" loading="lazy">
+          </div>
+          <div class="s-bar">
+            <span class="s-count">1 / 7</span>
+            <div class="s-nav"><button class="ctrl-btn s-prev" aria-label="Poprzednie">←</button><button class="ctrl-btn s-next" aria-label="Następne">→</button></div>
+          </div>
+        </div>
+        <div class="copy">
+          <span class="chip" style="background:#d1fae5;color:#065f46;">🏡 Bungalow</span>
+          <h2 class="t-sec" style="margin-top:14px;">Twój własny letni domek dla 4 osób</h2>
+          <p>Pełna prywatność, własny taras i wszystko, czego potrzeba na rodzinne wakacje.</p>
+          <ul class="b-feats">
+            <li><span class="tick">✓</span>Salon + oddzielna sypialnia dla 2 osób</li>
+            <li><span class="tick">✓</span>W pełni wyposażony aneks kuchenny</li>
+            <li><span class="tick">✓</span>Łazienka z kabiną prysznicową</li>
+            <li><span class="tick">✓</span>Taras, stół z krzesłami</li>
+            <li><span class="tick">✓</span>TV</li>
+          </ul>
+          <div class="b-price">
+            <div class="p1"><b>450 zł</b><span>za dobę / domek</span></div>
+            <div class="p2"><b>290 zł</b><span>🔥 promocja — wrzesień</span></div>
+          </div>
+          <p class="b-note">Preferowany wynajem min. 1 tydzień. Rezerwacje — <a href="#kontakt">skontaktuj się z nami</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAR -->
+  <section id="bar">
+    <div class="wrap">
+      <div class="split-card rv">
+        <div class="copy">
+          <span class="chip" style="background:#ffedd5;color:#9a3412;">🍽 Bar restauracyjny</span>
+          <h2 class="t-sec" style="margin-top:14px;">Domowa kuchnia, jak u mamy</h2>
+          <p>Smaczne i domowe jedzenie zaspokoi gusta każdego smakosza kuchni polskiej i regionalnej. Gotujemy wyłącznie z produktów o najwyższej świeżości i jakości.</p>
+          <div class="grill">🔥 Raz w tygodniu — biesiada grillowa dla gości!</div>
+        </div>
+        <div class="slider">
+          <div class="frame">
+            <img src="images/bar/01.jpg" alt="Bar restauracyjny" class="on">
+            <img src="images/bar/02.jpg" alt="Bar — sala" loading="lazy">
+            <img src="images/bar/03.jpg" alt="Bar restauracyjny" loading="lazy">
+            <img src="images/bar/04.jpg" alt="Bar restauracyjny" loading="lazy">
+          </div>
+          <div class="s-bar">
+            <span class="s-count">1 / 4</span>
+            <div class="s-nav"><button class="ctrl-btn s-prev" aria-label="Poprzednie">←</button><button class="ctrl-btn s-next" aria-label="Następne">→</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE -->
+  <section id="opinie">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="chip">Opinie</span>
+        <h2 class="t-sec">Goście o nas</h2>
+      </div>
+      <div class="q-card rv">
+        <div class="q-stage">
+          <div class="quote on"><div class="stars">★★★★★</div><blockquote>To nasze pierwsze wspólne wczasy nad morzem. Jesteśmy zachwyceni. Do zobaczenia za rok!</blockquote><p class="who">Marzena i Tomasz</p></div>
+          <div class="quote"><div class="stars">★★★★★</div><blockquote>Piękna pogoda, wyjątkowo ciepłe morze i znakomity pensjonat. Czego więcej trzeba na udane wczasy rodzinne?</blockquote><p class="who">Kwiatkowscy <i>lipiec 2014</i></p></div>
+          <div class="quote"><div class="stars">★★★★★</div><blockquote>Jedzenie i warunki wypoczynku bardzo dobre. Jeśli pogoda dopisze, w tym roku również do Was zawitamy.</blockquote><p class="who">Włodek <i>Bytom</i></p></div>
+          <div class="quote"><div class="stars">★★★★★</div><blockquote>Dobra lokalizacja — śmiało można odpocząć od samochodu. Wszędzie blisko.</blockquote><p class="who">Marysia i Jacek <i>Warszawa</i></p></div>
+          <div class="quote"><div class="stars">★★★★★</div><blockquote>Spędziliśmy tu dwa tygodnie. Warunki dobre, jedzenie dobre. Śmiało polecamy wszystkim.</blockquote><p class="who">Patrycja i Piotr <i>Białystok</i></p></div>
+        </div>
+        <div class="q-bar">
+          <button class="ctrl-btn q-prev" aria-label="Poprzednia">←</button>
+          <span class="q-idx">1 — 5</span>
+          <button class="ctrl-btn q-next" aria-label="Następna">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REZERWACJA -->
+  <section id="rezerwacja">
+    <div class="wrap">
+      <div class="r-card rv">
+        <div class="r-grid">
+          <div class="r-side">
+            <span class="chip">Rezerwacja</span>
+            <h2 class="t-sec">Zarezerwuj wakacje już dziś</h2>
+            <p>Wypełnij formularz — otworzy się gotowa wiadomość e-mail z Twoim zapytaniem. Potwierdzimy dostępność i przygotujemy ofertę.</p>
+            <div class="r-alt">
+              <a href="tel:+48883605225">📞 +48 883 605 225 <span>zadzwoń</span></a>
+              <a href="mailto:elstavita@elstavita.pl">✉️ elstavita@elstavita.pl <span>napisz</span></a>
+            </div>
+          </div>
+          <form id="booking-form">
+            <div class="fld"><label for="arrival">Przyjazd</label><input type="date" id="arrival" name="arrival" required></div>
+            <div class="fld"><label for="departure">Wyjazd</label><input type="date" id="departure" name="departure" required></div>
+            <div class="fld"><label for="room">Zakwaterowanie</label>
+              <select id="room" name="room"><option>Pokój 2-osobowy</option><option>Pokój 3-osobowy</option><option>Pokój 4-osobowy</option><option>Bungalow (4 osoby)</option></select>
+            </div>
+            <div class="fld"><label for="adults">Dorośli</label>
+              <select id="adults" name="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
+            </div>
+            <div class="fld"><label for="children">Dzieci</label>
+              <select id="children" name="children"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+            </div>
+            <div class="fld"><label for="b-name">Imię i nazwisko</label><input type="text" id="b-name" name="name" required autocomplete="name"></div>
+            <div class="fld full"><label for="b-phone">Telefon</label><input type="tel" id="b-phone" name="phone" required autocomplete="tel"></div>
+            <div class="fld full"><label for="b-msg">Wiadomość (opcjonalnie)</label><textarea id="b-msg" name="message" rows="2" placeholder="Dostawki, pytania, preferencje…"></textarea></div>
+            <div class="submit-row"><button type="submit" class="btn">Wyślij zapytanie →</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="chip">Kontakt</span>
+        <h2 class="t-sec">Znajdź nas we Władysławowie</h2>
+      </div>
+      <div class="k-grid">
+        <div class="k-cards rv">
+          <div class="k-card"><span class="ic" style="background:#e0f2fe;">📍</span><div><h4>Adres</h4><p>ul. Cetniewska 21, 84-120 Władysławowo</p></div></div>
+          <a class="k-card" href="tel:+48883605225"><span class="ic" style="background:#d1fae5;">📞</span><div><h4>Telefon</h4><p>+48 883 605 225</p></div></a>
+          <a class="k-card" href="mailto:elstavita@elstavita.pl"><span class="ic" style="background:#fef3c7;">✉️</span><div><h4>E-mail</h4><p>elstavita@elstavita.pl</p></div></a>
+          <a class="k-card" href="https://www.facebook.com/dwelstavita" target="_blank" rel="noopener"><span class="ic" style="background:#dbeafe;">👍</span><div><h4>Social</h4><p>Facebook ↗</p></div></a>
+        </div>
+        <div class="map-wrap rv">
+          <iframe title="Mapa dojazdu — Elsta Vita" src="https://maps.google.pl/maps?q=w%C5%82adys%C5%82awowo+ul+cetniewska+21&ie=UTF8&hq=&hnear=Cetniewska+21,+84-120+W%C5%82adys%C5%82awowo,+pucki,+pomorskie&t=p&ll=54.800784,18.389568&spn=0.009895,0.029998&z=15&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div id="projekty">
+      <div class="wrap">
+        <details>
+          <summary>
+            <img src="images/misc/logo_unia_europejska.png" alt="Logo UE">
+            <span class="t">Projekt współfinansowany ze środków UE</span>
+            <span class="more">szczegóły →</span>
+          </summary>
+          <div class="eu-body">
+            <p><b>Tytuł projektu:</b> Wzrost potencjału oraz zwiększenie odporności przedsiębiorstwa Elsta Vita</p>
+            <p>Projekt ma na celu realizację inwestycji prowadzących do odbudowy i rozwoju potencjału przedsiębiorstw oraz zwiększenia ich odporności na kryzys gospodarczy wywołany przez pandemię COVID-19.</p>
+            <p><span class="fund">Dofinansowanie z UE: 84 506,31 PLN</span></p>
+            <p><b>Firma w ramach realizacji projektu:</b></p>
+            <ul>
+              <li>wdroży rozwiązanie polegające na cyfryzacji procesów w przedsiębiorstwie polegające na implementacji kompleksowego oprogramowania POS H+G (SOGA + SOHO),</li>
+              <li>zakupi saunę, dostępną dla gości ośrodka oraz odpłatnie dla osób z zewnątrz — dywersyfikacja usług i przychodów,</li>
+              <li>zakupi windę osobową, która zwiększy atrakcyjność ośrodka oraz dostępność dla osób z niepełnosprawnościami.</li>
+            </ul>
+            <div class="logos"><img src="images/misc/logotypy.png" alt="Logotypy UE" loading="lazy"></div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="f-head">
+        <h2>Morze <span class="grad-txt">czeka</span> na Was! 🌊</h2>
+        <a href="#rezerwacja" class="btn">Zarezerwuj pobyt →</a>
+      </div>
+      <div class="f-cols">
+        <div>
+          <h5>Elsta Vita</h5>
+          <ul><li>Dom Wypoczynkowy</li><li>ul. Cetniewska 21</li><li>84-120 Władysławowo</li></ul>
+        </div>
+        <div>
+          <h5>Menu</h5>
+          <ul><li><a href="#atrakcje">Atrakcje</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#cennik">Cennik</a></li><li><a href="#bungalow">Bungalow</a></li></ul>
+        </div>
+        <div>
+          <h5>Kontakt</h5>
+          <ul><li><a href="tel:+48883605225">+48 883 605 225</a></li><li><a href="mailto:elstavita@elstavita.pl">elstavita@elstavita.pl</a></li><li><a href="https://www.facebook.com/dwelstavita" target="_blank" rel="noopener">Facebook ↗</a></li></ul>
+        </div>
+      </div>
+      <div class="f-bottom">© <span id="year">2026</span> Dom Wypoczynkowy Elsta Vita — noclegi Władysławowo</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+
+  <!-- Przełącznik wersji dla klienta -->
+  <nav id="ver-switch" aria-label="Wybór wersji strony">
+    <a href="./" class="home" title="Wybór wersji">✦</a>
+    <a href="w1.html" data-v="1">1</a>
+    <a href="w2.html" data-v="2">2</a>
+    <a href="w3.html" data-v="3">3</a>
+    <a href="w4.html" data-v="4">4</a>
+    <a href="w5.html" data-v="5">5</a>
+  </nav>
+  <style>
+    #ver-switch{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;gap:5px;background:rgba(15,17,15,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:7px 9px;border-radius:100px;font:600 13px/1 system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    #ver-switch a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;text-decoration:none;transition:background .2s}
+    #ver-switch a:hover{background:rgba(255,255,255,.22)}
+    #ver-switch a.cur{background:#fff;color:#111}
+    #ver-switch .home{font-size:15px;border-right:1px solid rgba(255,255,255,.2);border-radius:50% 0 0 50%;width:40px;margin-right:2px}
+    @media(max-width:480px){#ver-switch a{width:32px;height:32px}}
+  </style>
+  <script>(function(){var m=location.pathname.match(/w(\d)\.html/);if(m){var a=document.querySelector('#ver-switch a[data-v="'+m[1]+'"]');if(a)a.classList.add('cur');}})();</script>
+</body>
+</html>
